@@ -4,4 +4,4 @@ services: -docker
 before_install:
   - docker build -t nadireaziz/simplereact -f Dockerfile.dev .
 script:
-  - docker run nadireaziz/simplereact npm run test -- --coverage
+  - docker run -e CI=true nadireaziz/simplereact npm run test
